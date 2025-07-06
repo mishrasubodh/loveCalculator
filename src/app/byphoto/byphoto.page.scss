@@ -1,91 +1,168 @@
- .bg-image {
-   --background:url('../../assets/images/rose.jpg') no-repeat center center fixed;
-   --background-size: cover;
-   --overflow: hidden;
- }
- .no-scroll .scroll-content {
-   overflow: hidden;
- }
-
- .bntion{
-text-align: center;
-    padding-top: 22px;
+.love-card {
+margin-top: 40px; // or adjust to 60px, 80px as needed
+  padding: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.3);
 }
 
- .trybtn {
-  --width: 51px;
-  --height: 60px;
-  --border-radius: 20%;
-  --vertical-align: middle;
-  --padding-start: 29px;
-  --padding-end: 29px;
-    --min-height: 61px;
-    --min-width: 215px;
+.profile-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-
-ion-header {
-  ion-toolbar {
-    --background: pink;
-    text-align: center;
-    padding-right: 10%;
-        padding-left: 0px;
-    text-align: center;
-    font-style: oblique;
-    color: #ff0000;
-    /* font-family: fantasy; */
-    --font-family: cursive;
-    --font-weight: 1000;
-  }
-}
-ion-card{
-
-  ion-item{
-        color: red;
-    font-style: unset;
-    font-variant-caps: all-small-caps;
-    font-weight: bold;
-    border-radius: 47px;
-        margin-left: -14px;
-  }
+.photo-preview {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f4f4f4;
+  border: 2px solid #f78fb3;
+  margin-right: 16px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
 }
 
-.avatar-edit {
-  input {
-    z-index: 999;
-    line-height: 0;
-    font-size: 50px;
-    position: absolute;
-    top: -2px;
-    left: -700px;
-    opacity: 0;
-    filter: alpha(opacity = 0);
-    -ms-filter: "alpha(opacity=0)";
-    cursor: pointer;
-    _cursor: hand;
-    margin: 0;
-    padding:0;
-    min-height: 100%;
-    min-width: 100%
-  }
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-h3{
-     padding-top: 25%;
-    padding-left: 10%;
-
+.placeholder {
+  line-height: 90px;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.sc-ion-card-md-h {
-  padding-left: 10px;
+.info-inputs {
+  flex: 1;
 }
 
-.form__image {
-  width: 140px;
-  display: block;
-  margin: 2rem auto 1rem;
+ion-input {
+  margin-bottom: 8px;
 }
 
-.image-container {
+.submit-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center-image {
+  text-align: center;
+  margin-top: 16px;
+}
+/////////////////////////
+/// 
+
+
+.loader-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.heart-loader {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: relative;
+  transform: rotate(45deg);
+  animation: beat 0.8s infinite;
+}
+
+.heart-loader::before,
+.heart-loader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart-loader::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart-loader::after {
+  left: -25px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% { transform: rotate(45deg) scale(1); }
+  50% { transform: rotate(45deg) scale(1.2); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.love-btn {
+  border-radius: 25px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.love-btn:hover {
+  transform: scale(1.05);
+}
+:host {
+  --ion-background-color: transparent;
+}
+
+.bg-image {
+  background: linear-gradient(to bottom right, #e85c84, #c21d36);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.love-bg {
+  --background: transparent;
+  background: linear-gradient(to bottom right, #ffe0e9, #ffd6e8, #ffc2e0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 10px;
+}
+.love-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/heart-pattern.png'); // optional hearts overlay
+  opacity: 0.05;
+  z-index: 0;
+}
+.lovetoolbar {
+  --background: linear-gradient(to right, #ff6a88, #ff99ac);
+  --color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+  height: 70px; /* Increase height if needed */
+  display: flex;
+  align-items: flex-start; /* Align title to top */
+  padding-top: 10px; /* Space from top */
+}
+
+.lovetitle {
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 8px; /* Adds space above the title text */
+  color: #fff;
+  width: 100%;
   text-align: center;
 }

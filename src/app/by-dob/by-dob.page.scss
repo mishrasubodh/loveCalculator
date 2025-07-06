@@ -2,7 +2,26 @@
   background: url('../../assets//images/background.png') no-repeat center center / cover;
   padding: 16px;
 }
+.lovetoolbar {
+  --background: linear-gradient(to right, #ff6a88, #ff99ac);
+  --color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+  height: 70px; /* Increase height if needed */
+  display: flex;
+  align-items: flex-start; /* Align title to top */
+  padding-top: 10px; /* Space from top */
+}
 
+.lovetitle {
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 8px; /* Adds space above the title text */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
 .dob-card {
   border-radius: 20px;
   overflow: hidden;

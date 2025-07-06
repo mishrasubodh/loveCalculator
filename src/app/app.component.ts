@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, NavigationEnd } from "@angular/router";
 import { Platform, AlertController } from "@ionic/angular";
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style } from '@capacitor/status-bar';
@@ -12,6 +12,7 @@ import { App } from '@capacitor/app';
   standalone:false
 })
 export class AppComponent {
+    currentUrl: string = '';
   public appPages = [
    {
     title: "Home",
@@ -43,6 +44,11 @@ export class AppComponent {
   ) {
     this.initializeApp();
     this.handleHardwareBackButton();
+     this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.urlAfterRedirects;
+      }
+    });
   }
 
   initializeApp() {

@@ -1,25 +1,75 @@
-.list-md {
-
-     background-image: url('../assets/images/slidbgimage.jpg');
-}
 
 ion-menu {
-      --background: #e6687f;
-    text-align: center;
-    font-family: sans-serif;
-  --ion-text-color: red;
---ion-background-color: #c75b6e;
-    --ion-text-color: #f9d5d5;
-    --font-style: oblique;
-  ion-toolbar {
-    --background: #ea768b;
+  --background: linear-gradient(to bottom right, rgba(255, 192, 203, 0.3), rgba(255, 105, 180, 0.4));
+  backdrop-filter: blur(12px);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+ion-list {
+  padding: 12px;
+}
+
+.menu-item {
+  --background: transparent;
+  --color: #ff4f81;
+  margin: 8px 12px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  font-weight: 500;
+
+  ion-icon {
+    font-size: 20px;
+    color: #ff4f81;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 8px;
   }
 
-  ion-list {/* optional, but it needs when you use gradient as a background color.*/
-    background: transparent;
+  ion-label {
+    color: #ff4f81;
+    font-size: 15px;
   }
 
-  ion-icon{
-       color: blue;
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+  }
+
+  &.selected {
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
+    box-shadow: 0 0 10px rgba(255, 105, 135, 0.5);
+    
+    ion-icon,
+    ion-label {
+      color: #fff;
+    }
+
+    ion-icon {
+      background: rgba(255, 255, 255, 0.3);
+    }
   }
 }
+
+.lovetoolbar {
+  --background: linear-gradient(to right, #ff6a88, #ff99ac);
+  --color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+  height: 70px; /* Increase height if needed */
+  display: flex;
+  align-items: flex-start; /* Align title to top */
+  padding-top: 10px; /* Space from top */
+}
+
+.lovetitle {
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 8px; /* Adds space above the title text */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
