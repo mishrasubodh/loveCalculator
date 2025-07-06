@@ -1,0 +1,91 @@
+ .bg-image {
+   --background:url('../../assets/images/rose.jpg') no-repeat center center fixed;
+   --background-size: cover;
+   --overflow: hidden;
+ }
+ .no-scroll .scroll-content {
+   overflow: hidden;
+ }
+
+ .bntion{
+text-align: center;
+    padding-top: 22px;
+}
+
+ .trybtn {
+  --width: 51px;
+  --height: 60px;
+  --border-radius: 20%;
+  --vertical-align: middle;
+  --padding-start: 29px;
+  --padding-end: 29px;
+    --min-height: 61px;
+    --min-width: 215px;
+}
+
+
+ion-header {
+  ion-toolbar {
+    --background: pink;
+    text-align: center;
+    padding-right: 10%;
+        padding-left: 0px;
+    text-align: center;
+    font-style: oblique;
+    color: #ff0000;
+    /* font-family: fantasy; */
+    --font-family: cursive;
+    --font-weight: 1000;
+  }
+}
+ion-card{
+
+  ion-item{
+        color: red;
+    font-style: unset;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+    border-radius: 47px;
+        margin-left: -14px;
+  }
+}
+
+.avatar-edit {
+  input {
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    top: -2px;
+    left: -700px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding:0;
+    min-height: 100%;
+    min-width: 100%
+  }
+}
+
+h3{
+     padding-top: 25%;
+    padding-left: 10%;
+
+}
+
+.sc-ion-card-md-h {
+  padding-left: 10px;
+}
+
+.form__image {
+  width: 140px;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+
+.image-container {
+  text-align: center;
+}

@@ -1,0 +1,55 @@
+
+ion-card, ion-chip {
+     --background: #fff;
+}
+
+.selected {
+     background: #ccc;
+}
+
+.activeIndex {
+     position: relative;
+     ion-chip {
+          position: absolute;
+          margin: 0;
+          left: 50%;
+          top: 10px;
+          transform: translate(-50%, -10%);
+     }
+}
+
+ion-card{
+     --background: #ffdada;
+}
+ion-card-header{
+     color: red;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+ion-input{
+     color: red;
+     padding-right: 10px;
+}
+ion-chip{
+     color: red; 
+     background: lightgray;
+}
+ion-menu-button{
+     color: white;
+}
+
+ion-header {
+     ion-toolbar {
+       --background: pink;
+       text-align: center;
+       padding-right: 10%;
+       padding-left: 0px;
+       text-align: center;
+       font-style: oblique;
+       color: #ff0000;
+       /* font-family: fantasy; */
+       --font-family: cursive;
+       --font-weight: 1000;
+     }
+   }

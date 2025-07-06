@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      LOVE QUIZE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="activeIndex">
+      <ion-chip>
+        <ion-label>{{activeQuest + 1 }}/ {{  questions.length }}</ion-label>
+      </ion-chip>
+    </div>
+    <div *ngFor="let quest of questions; let i = index" style="margin-top: 15%;">
+    <ion-card *ngIf="activeQuest == i">
+      <ng-container>
+        <ion-card-header>
+          {{ quest.quest.replace('${name}', userName) }}
+        </ion-card-header>
+        <ion-card-content>
+          <div *ngIf="activeQuest != 0">
+            <ion-card *ngFor="let option of quest.options" (click)="getOption(option, i)" [ngClass]="{'selected': quest.selected == option}">
+              <ion-card-content>
+                {{ option }}
+              </ion-card-content>
+            </ion-card>
+          </div>
+          <div *ngIf="activeQuest == 0">
+            <ion-card *ngFor="let option of quest.options; let i = index">
+              <ion-input placeholder={{option}} name={{quest.name[i]}} (keyup)="getName($event, quest.name[i], quest.name.length)"></ion-input>
+            </ion-card>
+          </div>
+        </ion-card-content>
+      </ng-container>
+      <ion-button color="tertiary" [ngStyle]="{'float': 'right'}" *ngIf="activeQuest == i" (click)="next()">{{ questions.length-1 == i ? 'Submit' : 'Next' }}</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

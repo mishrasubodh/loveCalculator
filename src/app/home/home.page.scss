@@ -1,27 +1,292 @@
-#container {
+ .gradient-bg {
+    background: linear-gradient(145deg, #ff9a9e 0%, #fad0c4 100%);
+    background-size: cover;
+  }
+
+  .intro {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .intro-title {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .intro-sub {
+    color: #f8bbd0;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+
+  .card-icon {
+    font-size: 32px;
+    color: #ff80ab;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+  .love-quote, .fun-fact {
+  margin-top: 20px;
+  padding: 14px;
+  font-style: italic;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.extra-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #ffffffb3;
+  background: transparent;
+}
 
-  color: #8c8c8c;
+.quote-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.quote-box {
+  background-color: #ffe6ec;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.quote-text {
+  font-size: 1.3em;
+  color: #d63384;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 1em;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.refresh-btn {
+  --background: #007bff;
+  --border-radius: 50px;
+  color: white;
+  font-weight: 500;
+  padding: 0 16px;
+}
+
+.quote-text {
+  font-size: 1.4em;
+  font-style: italic;
+  color: #d63384;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+}
+@media (min-width: 600px) {
+  .page-container {
+    max-width: 390px;
+  }
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option-card:hover {
+  transform: translateY(-2px);
+}
+
+.icon-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  font-size: 24px;
+  color: #ff99aa;
+}
+
+.text-box h3 {
   margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-#container a {
-  text-decoration: none;
+.text-box p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #f0d8e6;
+}
+// ----------------------------------------------------
+.no-scroll-content {
+  --overflow: hidden;
+  overflow: hidden;
+}
+
+.home-flex-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.top-section {
+  text-align: center;
+}
+
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // subtle shadow
+  border-radius: 12px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.05); // slight glass effect
+}
+
+.option-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 12px;
+  color: white;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.quote-box {
+   margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background:whitesmoke; // soft glass effect
+  backdrop-filter: blur(6px); // optional blur for glass look
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.footer-bar ion-button {
+  margin: 0 6px;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 6px;
+}
+.full-page-wrapper{
+    padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.quote-box {
+  transition: all 0.3s ease;
+  opacity: 1;
+
+  &.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.quote-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 12px;
+
+  ion-button {
+    flex: 1;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --background: rgba(255, 255, 255, 0.07);
+    --color: #fff;
+    font-weight: 500;
+    text-transform: none;
+  }
+}
+ion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
+
+.big-menu-icon ion-icon {
+  font-size: 28px; // Increase icon size here
+  width: 32px;
+  height: 32px;
 }

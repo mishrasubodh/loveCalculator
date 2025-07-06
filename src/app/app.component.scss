@@ -1,0 +1,25 @@
+.list-md {
+
+     background-image: url('../assets/images/slidbgimage.jpg');
+}
+
+ion-menu {
+      --background: #e6687f;
+    text-align: center;
+    font-family: sans-serif;
+  --ion-text-color: red;
+--ion-background-color: #c75b6e;
+    --ion-text-color: #f9d5d5;
+    --font-style: oblique;
+  ion-toolbar {
+    --background: #ea768b;
+  }
+
+  ion-list {/* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
+
+  ion-icon{
+       color: blue;
+  }
+}

@@ -1,20 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="header">
+  <ion-toolbar color="light" class="header-toolbar glass">
+    <ion-buttons slot="start">
+      <ion-menu-button  class="big-menu-icon"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>💘 Love Calculator</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen class="no-scroll-content">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="full-page-wrapper">
+    
+    <!-- Header / Intro -->
+    <div class="top-section">
+      <h2>💘 Welcome to Love Calculator 💘</h2>
+      <p>Choose how you'd like to test your love!</p>
+    </div>
+
+    <!-- Options -->
+    <div class="options-wrapper">
+      <div class="option-card" (click)="goBypage(1)"> <div class="icon-box"><ion-icon name="text-outline"></ion-icon></div>
+  <div class="text-box">
+    <h3>By Name</h3>
+    <p>Match love percentage by names</p>
+  </div></div>
+      <div class="option-card" (click)="goBypage(2)"> <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+  <div class="text-box">
+    <h3>By Date of Birth</h3>
+    <p>Astro-match using your DOB</p>
+  </div> </div>
+      <div class="option-card" (click)="goBypage(3)"> <div class="icon-box"><ion-icon name="camera-outline"></ion-icon></div>
+  <div class="text-box">
+    <h3>By Photo</h3>
+    <p>Check compatibility with a selfie</p>
+  </div> </div>
+    </div>
+
+    <!-- Quote & Buttons -->
+    <div class="quote-box">
+      <p class="quote-text">{{ currentQuote.quoteText }}</p>
+      <p class="quote-author">— {{ currentQuote.quoteAuthor }}</p>
+    </div>
+
+    
+
+    <!-- Footer -->
+  <div class="quote-buttons">
+  <ion-button color="primary" (click)="refreshQuote()">
+    <ion-icon slot="start" name="refresh-outline"></ion-icon>
+    New Quote
+  </ion-button>
+  <ion-button color="secondary" (click)="shareQuote(currentQuote.quoteText)">
+    <ion-icon slot="start" name="share-social-outline"></ion-icon>
+    Share Quote
+  </ion-button>
+</div>
+
   </div>
+
 </ion-content>
+

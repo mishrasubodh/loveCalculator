@@ -1,0 +1,46 @@
+<ion-content class="result-content">
+
+  <ion-card class="love-result-card" >
+
+    <!-- Heading -->
+    <div class="result-heading">💖 Result of Love 💖</div>
+
+    <!-- Image with Percentage -->
+    <div class="image-section">
+      <img [ngClass]="getBackgroundClass()" class="love-bg-img" />
+      <div class="love-score-overlay">
+        {{ lcount }}<span class="percent-symbol">%</span>
+      </div>
+    </div>
+
+    <!-- Names -->
+    <div class="name-boxes">
+      <span class="name left-name">
+        {{ yname.length > 8 ? (yname | slice:0:8) + '...' : yname }}
+      </span>
+      <ion-icon name="heart" class="icons"></ion-icon>
+      <span class="name right-name">
+        {{ cname.length > 8 ? (cname | slice:0:8) + '...' : cname }}
+      </span>
+    </div>
+
+  </ion-card>
+
+  <!-- Quote -->
+  <div class="quote-text">
+    <ion-icon name="sparkles-outline" color="warning"></ion-icon>
+    <em>{{ quoteText }}</em>
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-group" *ngIf="showBtn">
+    <ion-button color="danger" expand="block" shape="round" (click)="goBack()">
+      <ion-icon slot="start" name="refresh-outline"></ion-icon>
+      Try Again
+    </ion-button>
+    <ion-button color="success" expand="block" shape="round" (click)="socialShare()">
+      <ion-icon slot="start" name="share-social-outline"></ion-icon>
+      Share %
+    </ion-button>
+  </div>
+</ion-content>

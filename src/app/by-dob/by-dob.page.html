@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>💘 By Date of Birth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="dob-content">
+
+  <!-- Your Card -->
+  <ion-card class="dob-card">
+    <img src="assets/images/2.jfif" class="card-img-top" />
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input
+          placeholder="Your Name"
+          [(ngModel)]="yourname"
+         class="circle-date"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-datetime
+          placeholder="Your Date of Birth"
+          [(ngModel)]="yourdob"
+          presentation="date"
+           preferWheel="true"
+          [max]="today"
+        ></ion-datetime>
+        <ion-icon name="calendar-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Crush Card -->
+  <ion-card class="dob-card">
+    <img src="assets/images/8.jpg" class="card-img-top" />
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input
+          placeholder="Crush Name"
+          [(ngModel)]="yourCrushname"
+          class="circle-date"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-datetime
+          placeholder="Crush DOB"
+          [(ngModel)]="yourCrushdob"
+          presentation="date"
+           preferWheel="true"
+          [max]="today"
+        ></ion-datetime>
+        <ion-icon name="calendar-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Button -->
+  <div class="button-container">
+    <ion-button
+      expand="block"
+      color="danger"
+      class="calculate-btn"
+      [disabled]="!yourname || !yourdob || !yourCrushname || !yourCrushdob"
+      (click)="submmit(yourname, yourdob, yourCrushname, yourCrushdob)"
+    >
+      💖 Calculate Love
+    </ion-button>
+  </div>
+
+  <!-- Image -->
+  <div class="image-container">
+    <img src="assets/images/astro2.jpg" alt="Heart Love" class="footer-image" />
+  </div>
+</ion-content>

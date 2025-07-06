@@ -1,0 +1,117 @@
+.result-content {
+    --background: linear-gradient(135deg, #fff0f5 0%, #ffe6f0 100%);
+  --background: #fdf0f5;
+  padding: 10px;
+  text-align: center;
+}
+
+.love-result-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.result-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e91e63;
+  margin-top: 12px;
+}
+
+.image-section {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.love-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.love-score-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: #fff;
+
+}
+
+.name-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.name {
+  background-color: #ffebf0;
+  color: #d81b60;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  max-width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icons {
+  color: #e91e63;
+  font-size: 24px;
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
+}
+
+
+.quote-text {
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+
+  padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 16px;
+}
+
+
+ion-button {
+  border-radius: 30px;
+  font-weight: bold;
+}
+.hide-during-screenshot {
+  display: none !important;
+}
+
+
+
+.bg-love-90 {
+  background-image: url('../../assets/images/more90.jpeg');
+}
+.bg-love-50 {
+  background-image: url('../../assets/images/cockatoo-1047394_640.jpg');
+  
+}
+.bg-love-30 {
+  background-image: url('../../assets/images/friends.jpg');
+}
+.bg-love-low {
+  background-image: url('../../assets/images/les30.jpeg');
+}

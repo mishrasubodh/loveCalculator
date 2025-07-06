@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CALCULATE LOVE By PHOTO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-image no-scroll">
+
+				<ion-card style="height: 90vh;">
+        <ion-item>
+					<div class="avatar-upload">
+
+            <div class="avatar-preview">
+              <div class="avatar-edit">
+                <input type='file' name="file1" (change)="uploadFile1($event)" />
+              </div>
+              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'" aria-placeholder="please select image">
+                <span *ngIf="!imageUrl"><h3>select photo</h3> </span>  
+              </div>
+            </div>
+          </div>
+          <div>
+        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourname'></ion-input>
+        <ion-input type="number" placeholder="Enter yourAge" [(ngModel)]='yourage'></ion-input>
+          </div>
+        
+</ion-item>
+
+				<ion-item>
+					<div class="avatar-upload">
+            <div class="avatar-preview">
+						<div class="avatar-edit">
+							<input type='file' name="file2" (change)="uploadFile1($event)" />
+            </div>
+              <div id="imagePreview2" [style.backgroundImage]="'url('+ imageUrl1 +')'">
+              <span *ngIf="!imageUrl1"><h3>select photo</h3> </span> 
+              </div>
+            </div>
+          </div>
+          <div>
+        <ion-input type="text" placeholder="Enter yourAge" [(ngModel)]="yourcrush"></ion-input>
+         <ion-input type="number" placeholder="Enter crushage" [(ngModel)]="crushage"></ion-input>
+          </div>
+        
+</ion-item>
+ <div class="bntion"><ion-button class="trybtn" color="danger"[disabled]="!yourname||!yourage||!imageUrl||!yourcrush||!crushage||!imageUrl1" (click)="subbmitData(yourname,yourage,imageUrl,yourcrush,crushage,imageUrl1);">Calculate Love</ion-button></div>
+  <div class="image-container">
+        <img
+          src='assets/images/camera.png'
+          alt="Heart Love"
+          class="form__image"
+        />
+      </div>
+</ion-card>
+
+</ion-content>
+
+
+<!-- <ion-content padding>
+  <ion-item>
+    <p>{{imageURI}}</p>
+    <input type="file" name="file" ion-button color="secondary" (change)="uploadFile1($event)">Get Image
+  </ion-item>
+  <ion-item>
+    <h4>Image Preview</h4>
+    <br/>
+    <img [src]="base64Data | safe:'url'"  alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Upload</button>
+  </ion-item>
+</ion-content> -->
