@@ -27,19 +27,22 @@
 
 
 :root {
-    --ion-color-primary: #ffc0cb;
-    --ion-color-secondary: #AARRGGBB;
+  --ion-color-primary: #ffc0cb;
+  --ion-color-secondary: #AARRGGBB;
 }
-      .alert-wrapper.sc-ion-alert-md {
-    border-radius: 4px;
-    background-color:#F35E5D;
-    }
-    .alert-button-inner.sc-ion-alert-md {
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    color: blue;
-     --ion-item{
-       background: bottom;
+
+.alert-wrapper.sc-ion-alert-md {
+  border-radius: 4px;
+  background-color: #F35E5D;
+}
+
+.alert-button-inner.sc-ion-alert-md {
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: blue;
+
+  --ion-item {
+    background: bottom;
   }
 }
 
@@ -128,10 +131,10 @@ label {
 }
 
 .avatar-upload {
- // position: relative;
- // max-width: 205px;
- // margin: 10px auto 30px;
- max-height: 196px;
+  // position: relative;
+  // max-width: 205px;
+  // margin: 10px auto 30px;
+  max-height: 196px;
 }
 
 .avatar-upload .avatar-edit {
@@ -295,33 +298,39 @@ ion-content {
   width: 100%;
   height: 100%;
 }
+
 ion-content::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
   z-index: 0;
 }
 
-ion-content > * {
+ion-content>* {
   position: relative;
   z-index: 1;
 }
-ion-content > * {
+
+ion-content>* {
   position: relative;
   z-index: 1;
 }
 
 .alert-wrapper.sc-ion-alert-md {
   border-radius: 4px;
-  background-color:#F35E5D;
-  }
-  .alert-button-inner.sc-ion-alert-md {
+  background-color: #F35E5D;
+}
+
+.alert-button-inner.sc-ion-alert-md {
   -ms-flex-pack: end;
   justify-content: flex-end;
   color: blue;
 }
+
 .custom-toast {
   --border-radius: 12px;
   --background: linear-gradient(to right, #ff758c, #ff7eb3);
@@ -329,8 +338,9 @@ ion-content > * {
   font-weight: bold;
   text-align: center;
 }
+
 .app-footer {
- background-color:#933131;
+  background-color: #933131;
   padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
   bottom: 0;
@@ -349,4 +359,32 @@ ion-content > * {
     color: #fff;
     opacity: 0.75;
   }
+}
+
+.bg-image {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.love-card {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.3);
+}
+
+ion-input {
+  --background: #fff0f5;
+  --border-radius: 20px;
+  --color: #333;
+  border: 1px solid #ffc0cb;
+  --padding-start: 16px !important; // Adds space from the left inside input box
+  font-size: 15px;
+  margin-bottom: 10px;
 }

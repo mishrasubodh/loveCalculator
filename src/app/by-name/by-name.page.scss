@@ -1,13 +1,31 @@
 .lovetoolbar {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  --background: linear-gradient(to right, #ff6a88, #ff99ac);
+  --color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+  height: 70px; /* Increase height if needed */
+  display: flex;
+  align-items: flex-start; /* Align title to top */
+  padding-top: 10px; /* Space from top */
 }
 
 .lovetitle {
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 8px; /* Adds space above the title text */
   color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+
+.maincard {
+  margin-top: 40px;  // space between header and card
+  padding: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.25);
 }
 
 .love-content {
@@ -51,9 +69,12 @@
 }
 
 .form-label {
-  font-weight: 500;
-  margin-bottom: 0.3rem;
+   display: block;
+  font-weight: 600;
   color: #e91e63;
+  margin-bottom: 6px;
+  margin-left: 4px;
+  font-size: 15px;
 }
 
 .inputclass {

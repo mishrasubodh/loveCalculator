@@ -1,3 +1,30 @@
+ 
+ /* Gradient & glass-style toolbar */
+.lovetoolbar {
+  --background: linear-gradient(to right, #ff6a88, #ff99ac);
+  --color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 10px;
+  height: 64px;
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+/* Optional: title style */
+.lovetitle {
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 4px;
+  color: #ffffff;
+}
+
+/* Optional: bigger menu icon */
+.big-menu-icon {
+  font-size: 26px;
+}
+
  .gradient-bg {
     background: linear-gradient(145deg, #ff9a9e 0%, #fad0c4 100%);
     background-size: cover;
@@ -183,24 +210,80 @@
 .options-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  padding: 20px 16px;
   margin-top: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // subtle shadow
-  border-radius: 12px;
-  padding: 12px;
-  background-color: rgba(255, 255, 255, 0.05); // slight glass effect
 }
 
 .option-card {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 12px;
-  color: white;
+  background: linear-gradient(to right, #ffe6f0, #ffd9ec);
+  border-radius: 18px;
+  padding: 16px;
   display: flex;
-  gap: 12px;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 18px rgba(227, 122, 143, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+
+  // Web hover effect
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(255, 105, 135, 0.35);
+  }
+
+  // Tap/click effect
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+  }
 }
+.top-section p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e91e63;
+  text-align: center;
+  margin-bottom: 12px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #ff4f81, #ff8fa3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  box-shadow: 0 2px 6px rgba(255, 105, 135, 0.3);
+}
+
+.icon-box ion-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.text-box h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: #cc2c61;
+}
+
+.text-box p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #993355;
+}
+
 
 .quote-box {
    margin-top: 16px;
